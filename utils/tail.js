@@ -29,7 +29,7 @@ const tail = async (filename, { limit = 1000, search = '' } = {}) => {
     .then(async (stats) => {
       size = stats.size;
       buffSize = Math.min(size, CHUNK_SIZE);
-      offset = size - CHUNK_SIZE;
+      offset = Math.max(0, size - CHUNK_SIZE);
       buff = Buffer.alloc(buffSize);
       leftover = Buffer.alloc(0);
       lines = [];
@@ -82,7 +82,6 @@ const tail = async (filename, { limit = 1000, search = '' } = {}) => {
         }
         lines = [...lines, ...str_array];
       }
-
       if (lines[0] === '') {
         lines.shift();
       }

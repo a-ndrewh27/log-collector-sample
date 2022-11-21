@@ -53,3 +53,8 @@ test('throws error of file not found', async () => {
     });
   await expect(fileNameTypo).rejects.toThrow('no such file or directory');
 });
+
+test('runs tail on log file with one line', async () => {
+  const logs = await tail('./test/one.log');
+  expect(logs.length).toBe(1);
+});
