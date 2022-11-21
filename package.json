@@ -1,0 +1,16 @@
+{
+  "name": "log_reader_express_server",
+  "version": "1.0.0",
+  "description": "Microservice for retrieving log entries from Unix based file systems.",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "jest"
+  },
+  "author": "Andrew Hwang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jest": "^29.3.1"
+  }
+}
