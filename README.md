@@ -16,9 +16,9 @@
 
 ## GET Routes
 
-| resource                     | description                                                                         |
-| :--------------------------- | :---------------------------------------------------------------------------------- |
-| `/logs/?filename={filename}` | returns up to 1000 lines from log file within `/var/log/`, ordered newest -> oldest |
+| resource                     | description                                                              |
+| :--------------------------- | :----------------------------------------------------------------------- |
+| `/logs/?filename={filename}` | returns lines from log file within `/var/log/`, ordered newest -> oldest |
 
 Note `filename` is a required parameter
 
@@ -33,7 +33,7 @@ Note `filename` is a required parameter
 ### Example query using URI parameters
 
 ```
-http://localhost:3000/logs?limit=50&filename=install.log
+http://localhost:3000/logs?filename=install.log&limit=50
 ```
 
 ## Unit Tests
