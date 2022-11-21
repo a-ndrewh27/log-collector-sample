@@ -5,7 +5,7 @@
 1. Clone this repository and install dependencies
 
 ```
-> git clone git@github.com:a-ndrewh27/log-collector-sample.git
+> git clone https://github.com/a-ndrewh27/log-collector-sample.git
 > cd log-collector-sample
 
 > npm i
